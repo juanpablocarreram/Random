@@ -1,7 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Inter:wght@100..900&display=swap');
 /* Start Reset */
 *{
     padding:0;
     margin:0;
     box-sizing:border-box;
+    font-family:"Inter", sans-serif;
+    font-weight:500;
 }
-/* End Reset */
+/* End Reset*/
+
+/* Start Body */
+body {
+display:grid;
+grid-template:10vh 90vh/100vw;
+}
+/* End Body */
+/* Start Header */
+header{
+    grid-area:1/1/2/2;
+    background-color:black;
+    display:grid;
+    grid-template:100%/20vw 60vw 20vw;
+}
+/* End Header */
+nav {
+    grid-area:1/2/2/3;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.button{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:min(10vw, 150px);
+    height:40px;
+    position:relative;
+}
+.button:hover{
+    transform:scale(110%);
+    transition:.2s ease-in-out;
+}
+
+.button-back {
+    background:linear-gradient(rgb(255, 3, 255),yellow,green);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:107%;
+    height:109%;
+    text-decoration:none;
+    border-radius:10px;
+    position:absolute;
+    z-index:0;
+    animation:rotate linear 3s infinite;
+
+}
+.span
+{
+    color:transparent;
+    background:linear-gradient(purple,yellow,green);
+    background-clip:text;
+    animation:color 3s ease-in-out infinite;
+    
+}
+.button-content {
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+    text-decoration:none;
+    border-radius:10px;
+    position:relative;
+    z-index:1;
+    
+
+    
+}
+
+
+/* Animations */
+
+@keyframes rotate{
+    0%{filter:blur(6px) brightness(200%) hue-rotate(0deg);}
+    100%{filter:blur(6px)brightness(200%) hue-rotate(360deg);}
+    
+}
+@keyframes color{
+    0%{filter:hue-rotate(0deg);}
+    100%{filter: hue-rotate(360deg);}
+}
