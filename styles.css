@@ -81,6 +81,7 @@ nav {
     content:"";
     position:absolute;
     display:block;
+    opacity:0;
     width:140px;
     background-color:rgb(84, 83, 83);
     height:250px;
@@ -88,7 +89,8 @@ nav {
     top:40px;
 }
 .button:hover::after{
-    display:block;
+opacity:1;
+    transition:all .1s ease-in-out;
 }
 
 /* Animations */
