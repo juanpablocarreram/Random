@@ -38,10 +38,7 @@ nav {
     height:40px;
     position:relative;
 }
-.button:hover{
-    transform:scale(110%);
-    transition:.2s ease-in-out;
-}
+
 
 .button-back {
     background:linear-gradient(rgb(255, 3, 255),yellow,green);
