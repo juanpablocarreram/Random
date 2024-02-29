@@ -80,7 +80,19 @@ nav {
 
     
 }
-
+.button::after{
+    content:"";
+    position:absolute;
+    display:block;
+    width:140px;
+    background-color:rgb(84, 83, 83);
+    height:250px;
+    border-radius:15px;
+    top:40px;
+}
+.button:hover::after{
+    display:block;
+}
 
 /* Animations */
 
